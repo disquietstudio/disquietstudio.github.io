@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["846WFA828F.com.disquietstudio.synapse"],
+        "components": [
+          { "/": "/play", "comment": "Synapse launch event route" },
+          { "/": "/play/*", "comment": "Synapse event sub-routes" }
+        ]
+      }
+    ]
+  }
+}
