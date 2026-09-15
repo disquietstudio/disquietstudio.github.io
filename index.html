@@ -231,6 +231,52 @@
   @media (prefers-reduced-motion:reduce){
     .fade{opacity:1;transform:none;animation:none}
   }
+
+  /* ---------- synapse promo ---------- */
+
+  .promo{
+    border-top:1px solid var(--line);
+    padding:clamp(1.75rem,4vw,2.5rem) 0;
+    display:grid;
+    grid-template-columns:4.5rem 1fr auto;
+    gap:clamp(1.1rem,3vw,1.75rem);
+    align-items:center;
+    text-decoration:none;
+  }
+  .promo-art{
+    border:1px solid var(--line);
+    border-radius:0.5rem;
+    overflow:hidden;
+    line-height:0;
+    background:#050507;
+    transition:border-color 0.25s ease;
+  }
+  .promo:hover .promo-art,.promo:focus-visible .promo-art{border-color:var(--accent)}
+  .promo-art img{width:100%;height:auto;display:block}
+  .promo-text{display:block;min-width:0}
+  .promo-kicker{
+    display:block;
+    font-size:0.75rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:0.45rem;
+  }
+  .promo-title{
+    display:block;
+    font-weight:500;
+    font-size:1.0625rem;
+    letter-spacing:-0.02em;
+    margin-bottom:0.2rem;
+  }
+  .promo-line{display:block;color:var(--muted);font-size:0.9375rem;line-height:1.45}
+  .promo-go{color:var(--muted);transition:transform 0.25s ease,color 0.25s ease}
+  .promo:hover .promo-go,.promo:focus-visible .promo-go{color:var(--accent);transform:translateX(0.25rem)}
+  @media (max-width:46rem){
+    .promo{grid-template-columns:3.5rem 1fr;gap:1rem}
+    .promo-go{display:none}
+  }
+
 </style>
 </head>
 <body>
@@ -254,6 +300,19 @@
 
     <p class="scroll-hint fade">Sweden</p>
   </header>
+
+  <a class="promo" href="/synapse/">
+    <span class="promo-art">
+      <img src="/synapse/synapse-thumb.webp" width="360" height="450" alt="" loading="lazy" decoding="async">
+    </span>
+    <span class="promo-text">
+      <span class="promo-kicker">Out now on iOS</span>
+      <span class="promo-title">Synapse &mdash; Tower Defense</span>
+      <span class="promo-line">Sixteen signal paths, thirty waves, and a bank that pays interest on whatever you don&rsquo;t spend.</span>
+    </span>
+    <span class="promo-go" aria-hidden="true">&rarr;</span>
+  </a>
+
 
   <main>
     <section class="block">
