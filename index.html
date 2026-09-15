@@ -69,11 +69,11 @@
   /* ---------- hero ---------- */
 
   .hero{
-    min-height:100svh;
+    min-height:88svh;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:6rem 0 4rem;
+    padding:6rem 0 2.5rem;
   }
 
   .mark{
@@ -120,8 +120,8 @@
   }
 
   .scroll-hint{
-    margin-top:auto;
-    padding-top:4rem;
+    margin-top:1.75rem;
+    padding-top:0;
     font-size:0.75rem;
     letter-spacing:0.14em;
     text-transform:uppercase;
@@ -182,6 +182,26 @@
     border-radius:50%;
   }
 
+  .body p.status{color:var(--accent)}
+  .status--dev{color:var(--muted)}
+  .status--dev::before{background:var(--muted)}
+  .body .status + h2.project-title{margin-top:0}
+  .body .status:not(:first-child){margin-top:3.25rem}
+  .body .links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.4rem 1.5rem;
+    font-size:0.9375rem;
+    color:var(--ink);
+  }
+  .body .links a{
+    text-decoration:none;
+    border-bottom:1px solid var(--line);
+    padding-bottom:0.1em;
+    transition:border-color 0.25s ease,color 0.25s ease;
+  }
+  .body .links a:hover,.body .links a:focus-visible{color:var(--accent);border-color:var(--accent)}
+
   /* ---------- contact ---------- */
 
   .email{
@@ -236,9 +256,9 @@
 
   .promo{
     border-top:1px solid var(--line);
-    padding:clamp(1.75rem,4vw,2.5rem) 0;
+    padding:clamp(2.5rem,5.5vw,3.5rem) 0;
     display:grid;
-    grid-template-columns:4.5rem 1fr auto;
+    grid-template-columns:5.5rem 1fr auto;
     gap:clamp(1.1rem,3vw,1.75rem);
     align-items:center;
     text-decoration:none;
@@ -337,14 +357,25 @@
     <section class="block">
       <div class="label">Work</div>
       <div class="body">
-        <p class="status">In development</p>
+        <p class="status">Out now on iOS</p>
         <h2 class="project-title">Synapse</h2>
         <p>
           A tower defense game built for one hand and a phone screen. Thirty waves,
-          a bank that pays interest on whatever you don't spend, and a permanent
+          a bank that pays interest on whatever you don&rsquo;t spend, and a permanent
           choice to make every time you clear a bonus round.
         </p>
-        <p>Coming to mobile.</p>
+        <p class="links">
+          <a href="/synapse/">About the game</a>
+          <a href="https://apps.apple.com/app/id6807713910">App Store</a>
+        </p>
+
+        <p class="status status--dev">In development</p>
+        <h2 class="project-title">Frontier</h2>
+        <p>
+          An isometric town-builder set in the old west. Lay out a main street,
+          put people to work, and find out how much of it is still standing
+          after the winter.
+        </p>
       </div>
     </section>
 
